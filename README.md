@@ -25,15 +25,21 @@
 1. [Introduction to Buffer Overflows in C++ (Heap & Stack Explained)](https://www.youtube.com/watch?v=tQb2yZDMrb0)
 2. [Running a Buffer Overflow Attack - Computerphile](https://www.youtube.com/watch?v=1S0aBV-Waeo)
 3. 《汇编语言（第四版） - 王爽》清华大学出版社
+4. [《0day安全：软件漏洞分析技术（第二版）》](0day安全：软件漏洞分析技术（第二版）.pdf)
 
-##### Idea
+##### Apps inneed
 
-1. just read the assembly:
+1. OllyDbg
+2. 010 Editer
 
-    ![disassembly Verify-password](README.assets/image-20220324121426981.png)
+##### Files
 
-2. We can find there is a buffer length of 8 byte, and the total length of current stack is 28 byte, from the bottom to the top, items are:
+1. [the origin source code for Q3](./2_Vulnerabilities and exploitation of vulnerabilities/source.c)
+2. [compile the source code](./2_Vulnerabilities and exploitation of vulnerabilities/run_souce.sh)
+3. [skip the verification](./2_Vulnerabilities and exploitation of vulnerabilities/source_file_jump.c)
+4. [the password to skip the verification][./2_Vulnerabilities and exploitation of vulnerabilities/password_jump.txt]
+5. [compile the code to skip verification](./2_Vulnerabilities and exploitation of vulnerabilities/run_file.sh)
+6. [insert own code to call Message Box](./2_Vulnerabilities and exploitation of vulnerabilities/source_file_callMessageBox.c)
+7. [the password to insert code](./2_Vulnerabilities and exploitation of vulnerabilities/password_callMessageBox.txt)
+8. [compile the code to insert code](./2_Vulnerabilities and exploitation of vulnerabilities/run_file_callMessageBox.sh)
 
-    1. return ip, where is the returning address when the function ends, 4 Byte
-    2. EBP, 4 Byte
-    3. 
